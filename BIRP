@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los Santos Customs Tablet</title>
+
+<style>
+
+/* dein CSS */
+
+...
+
+/* HIER UNTEN EINFÜGEN */
+
+.side-ad{
+    ...
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#061320;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* TABLET */
+
+.tablet{
+    width:1850px;
+    background:linear-gradient(180deg,#08213a,#04111d);
+    border:5px solid #0d0d0d;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 0 40px rgba(0,0,0,0.7);
+}
+
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.header img{
+    width:450px;
+    object-fit:contain;
+}
+
+/* MAIN */
+
+.main{
+    display:flex;
+    gap:20px;
+}
+
+/* LEFT SIDE */
+
+.left{
+    width:560px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* CAR IMAGE */
+
+.car-preview{
+    height:420px;
+    border-radius:14px;
+    overflow:hidden;
+    border:3px solid #1d4f86;
+    background:#010b14;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.car-preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* PRICE */
+
+.price-box{
+    background:#163b63;
+    border:3px solid #1d4f86;
+    border-radius:14px;
+    padding:20px;
+    text-align:center;
+    color:white;
+}
+
+.price-box h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+#price{
+    font-size:70px;
+    color:#76ff8d;
+    font-weight:bold;
+}
+
+.icon-button{
+    position:fixed;
+    top:20px;
+    right:20px;
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+    background:#0077ff;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+    font-size:24px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.25);
+    transition:0.3s;
+}
+
+.icon-button:hover{
+    background:#005fcc;
+    transform:scale(1.1);
+}
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+button{
+    padding:22px;
+    border:none;
+    border-radius:12px;
+    font-size:32px;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    transform:scale(1.02);
+}
+
+.pay{
+    background:linear-gradient(180deg,#29b63d,#0b6b1d);
+}
+
+.reset{
+    background:linear-gradient(180deg,#ff2d2d,#9b0000);
+}
+
+/* RIGHT SIDE */
+
+.right{
+    flex:1;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 0.8fr;
+    gap:18px;
+}
+
+/* BOX */
+
+.box{
+    background:#173d66;
+    border:3px solid #1d4f86;
+    border-radius:12px;
+    overflow:hidden;
+    height:fit-content;
+}
+
+.box h2{
+    background:#0d4f97;
+    color:white;
+    text-align:center;
+    padding:12px;
+    font-size:28px;
+    border-bottom:2px solid #082f5e;
+}
+
+/* ITEM */
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 14px;
+    border-top:1px solid rgba(255,255,255,0.08);
+    color:white;
+    background:#214d7b;
+    transition:0.2s;
+}
+
+.item:hover{
+    background:#2c649d;
+}
+
+.item span{
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* CHECKBOX */
+
+input[type="checkbox"]{
+    width:22px;
+    height:22px;
+    cursor:pointer;
+}
+
+/* INFO */
+
+.info{
+    padding:18px;
+    color:white;
+    line-height:2;
+    font-size:18px;
+}
+
+.red{
+    color:#ff5757;
+    font-weight:bold;
+}
+
+/* TABLE */
+
+.multi{
+    margin-top:20px;
+}
+
+.multi table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.multi th{
+    background:#0d4f97;
+    color:white;
+    padding:12px;
+    font-size:22px;
+}
+
+.multi td{
+    background:#214d7b;
+    color:white;
+    border:1px solid rgba(255,255,255,0.08);
+    padding:12px;
+    font-size:18px;
+}
+
+/* SCROLL */
+
+.scroll{
+    max-height:750px;
+    overflow-y:auto;
+}
+
+.scroll::-webkit-scrollbar{
+    width:10px;
+}
+
+.scroll::-webkit-scrollbar-thumb{
+    background:#0d4f97;
+    border-radius:10px;
+}
+
+/* VERTRÄGE */
+
+.contracts{
+    margin-top:25px;
+    background:#173d66;
+    border:3px solid #1d4f86;
+    border-radius:14px;
+    padding:20px;
+}
+
+.contracts h1{
+    color:white;
+    margin-bottom:20px;
+    font-size:36px;
+}
+
+.contract-form{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.contract-form input{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    flex:1;
+}
+
+.contract-form button{
+    padding:12px 20px;
+    font-size:18px;
+    background:linear-gradient(180deg,#29b63d,#0b6b1d);
+}
+
+.contracts table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.contracts th{
+    background:#0d4f97;
+    color:white;
+    padding:12px;
+}
+
+.contracts td{
+    background:#214d7b;
+    color:white;
+    padding:12px;
+    border:1px solid rgba(255,255,255,0.1);
+    text-align:center;
+}
+
+.status-green{
+    color:#76ff8d;
+    font-weight:bold;
+}
+
+.status-red{
+    color:#ff5757;
+    font-weight:bold;
+}
+
+.edit-btn{
+    background:#ffb300;
+    padding:8px 12px;
+    font-size:14px;
+    margin-right:5px;
+}
+
+.delete-btn{
+    background:#ff2d2d;
+    padding:8px 12px;
+    font-size:14px;
+}
+
+/* CALCULATOR */
+
+.calculator{
+    position:absolute;
+    left:40px;
+    top:350px;
+
+    width:300px;
+
+    background:#173d66;
+    border:3px solid #1d4f86;
+    border-radius:14px;
+
+    padding:15px;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+#calc-display{
+    width:100%;
+    height:60px;
+
+    margin-bottom:15px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#0b2540;
+    color:white;
+
+    font-size:28px;
+    text-align:right;
+
+    padding:10px;
+}
+
+.calc-buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+.calc-buttons button{
+    height:60px;
+
+    border:none;
+    border-radius:10px;
+
+    font-size:24px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.calc-buttons button:hover{
+    transform:scale(1.05);
+}
+
+.calc-btn{
+    background:#2c649d;
+    color:white;
+}
+
+.calc-blue{
+    background:#0d4f97;
+    color:white;
+}
+
+.calc-green{
+    background:#17a52f;
+    color:white;
+}
+
+.calc-red{
+    background:#d91f1f;
+    color:white;
+}
+
+.zero{
+    grid-column:span 2;
+}
+
+.lsc-title {
+    position: absolute;
+
+    top: 185px;
+    left: 420px;
+
+    font-size: 78px;
+    font-weight: bold;
+    font-family: 'Arial Black';
+
+    color: #4db8ff;
+
+    padding: 10px 25px;
+
+    border: 3px solid #0099ff;
+    border-radius: 15px;
+
+    background: rgba(0,0,0,0.45);
+
+    box-shadow:
+        0 0 10px #ffffff,
+        0 0 25px #0099ff,
+        0 0 45px #0099ff;
+
+    text-shadow:
+        0 0 5px #0099ff,
+        0 0 15px #0099ff;
+
+    z-index: 999;
+}
+.smokeys-title {
+    position: absolute;
+    top: 45px;
+    right: 220px;
+}
+.leaf {
+    width: 30px;
+    margin: 0 8px;
+    filter: drop-shadow(0 0 8px #39ff14);
+}
+
+.smokeys-title {
+    position: absolute;
+    top: 190px;
+    right: 360px;
+
+    font-size: 58px;
+    font-weight: bold;
+    font-family: 'Arial Black';
+
+    color: #7CFF4F;
+
+    padding: 10px 25px;
+
+    border: 3px solid #39ff14;
+    border-radius: 15px;
+
+    background: rgba(0,0,0,0.45);
+
+    box-shadow:
+        0 0 10px #39ff14,
+        0 0 25px #39ff14,
+        0 0 45px #39ff14;
+
+    text-shadow:
+        0 0 5px #39ff14,
+        0 0 15px #39ff14;
+
+    z-index: 999;
+}
+
+.search-box {
+    margin-bottom: 15px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 2px solid #1d4f86;
+
+    background: #0b2540;
+    color: white;
+
+    font-size: 18px;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+#searchInput:focus {
+    border-color: #00a2ff;
+    box-shadow: 0 0 10px rgba(0,162,255,0.4);
+}
+
+.box {
+    background:#173d66;
+    border:3px solid #1d4f86;
+    border-radius:12px;
+    overflow:hidden;
+    height:fit-content;
+
+    transition: all 0.25s ease;
+    transform: translateY(0);
+}
+
+.box:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 12px rgba(0, 162, 255, 0.2),
+        0 12px 30px rgba(0,0,0,0.55);
+
+    border-color: #1fb6ff;
+}
+
+.box:active {
+    transform: scale(0.99);
+}
+
+.box {
+    transition: all 0.25s ease;
+}
+
+</style>
+</head>
+<body>
+
+<div class="tablet">
+
+    
+<label class="item">
+    <span>Reparatur - $300</span>
+    <input type="checkbox" value="300">
+</label>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Teil suchen..." onkeyup="filterItems()">
+</div>
+
+<div class="lsc-title">
+    🔧 LSC 🔧
+</div>
+
+<div class="smokeys-title">
+    🌿 SMOKEY'S 🌿
+</div>
+
+    <!-- HEADER -->
+
+    <div class="header">
+        <img src="img/logo.png.png" alt="Logo">
+    </div>
+
+    <div class="tablet">
+    ...
+</div>
+
+<!-- HIER EINFÜGEN -->
+<a href="https://wiki.rage.mp/wiki/Vehicle_Colors"
+   target="_blank"
+   class="icon-button">
+   🚀
+</a>
+
+<!-- TASCHENRECHNER -->
+
+<div class="calculator">
+
+    <input type="text" id="calc-display" readonly>
+
+    <div class="calc-buttons">
+
+        <button onclick="clearCalc()" class="calc-red">C</button>
+        <button onclick="appendCalc('/')" class="calc-blue">/</button>
+        <button onclick="appendCalc('*')" class="calc-blue">*</button>
+        <button onclick="appendCalc('-')" class="calc-blue">-</button>
+
+        <button onclick="appendCalc('7')" class="calc-btn">7</button>
+        <button onclick="appendCalc('8')" class="calc-btn">8</button>
+        <button onclick="appendCalc('9')" class="calc-btn">9</button>
+        <button onclick="appendCalc('+')" class="calc-blue">+</button>
+
+        <button onclick="appendCalc('4')" class="calc-btn">4</button>
+        <button onclick="appendCalc('5')" class="calc-btn">5</button>
+        <button onclick="appendCalc('6')" class="calc-btn">6</button>
+        <button onclick="calculate()" class="calc-green">=</button>
+
+        <button onclick="appendCalc('1')" class="calc-btn">1</button>
+        <button onclick="appendCalc('2')" class="calc-btn">2</button>
+        <button onclick="appendCalc('3')" class="calc-btn">3</button>
+
+        <button onclick="appendCalc('0')" class="calc-btn zero">0</button>
+        <button onclick="appendCalc('.')" class="calc-btn">.</button>
+
+    </div>
+
+</div>
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <!-- LEFT -->
+
+        <div class="left">
+
+            <div class="car-preview">
+                <img src="img/logo2.png.png">
+            </div>
+
+            <div class="price-box">
+                <h1>Preis</h1>
+                <div id="price">$0</div>
+            </div>
+
+            <div class="buttons">
+                <button class="pay" onclick="payBill()">BEZAHLEN</button>
+                <button class="reset" onclick="resetAll()">RESET</button>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="right">
+
+            <!-- SONSTIGES -->
+
+            <div class="box">
+                <h2>Sonstiges / EK</h2>
+
+                <div class="scroll">
+
+                    <label class="item">
+                    <span>Reparatur - $300</span>
+                    <input type="checkbox" value="300">
+                    </label>
+
+                    <label class="item">
+                    <span>Waschen - $100</span>
+                    <input type="checkbox" value="100">
+                    </label>
+
+                    <label class="item">
+                    <span>Reparatur Auswärts - $750</span>
+                    <input type="checkbox" value="750">
+                    </label>
+
+                    <label class="item">
+                    <span>Abschleppen - $1000</span>
+                    <input type="checkbox" value="1000">
+                    </label>
+
+                    <label class="item">
+                    <span>Autoradio - $2000</span>
+                    <input type="checkbox" value="2000">
+                    </label>
+                    
+                    <label class="item">
+                    <span>Wachs 1 Tag - $10.000</span>
+                    <input type="checkbox" value="10000">
+                    </label>
+
+                    <label class="item">
+                    <span>Wachs 3 Tag - $25.000</span>
+                    <input type="checkbox" value="25000">
+                    </label>
+
+                    <label class="item"><span>Wachs 7 Tag - $40.000</span><input type="checkbox" value="40000"></label>
+                </div>
+            </div>
+
+            <!-- KAROSSERIE -->
+
+            <div class="box">
+                <h2>Karosserie</h2>
+
+                <div class="scroll">
+
+                    <label class="item"><span>Felgen - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Spoiler - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Frontstoßstange - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Heckstoßstange - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Auspuff - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Kühlergrill - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Motorhaube - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Linker Seitenschweller - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Rechter Seitenschweller - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Dach - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Hupe - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Käfig - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Innenverkleidung - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Tür Lautsprecher - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Sitze - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Lenkrad - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Motorblock - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Luftkühler - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Domstrebe - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Kotflügel - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Scheiben - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Kennzeichenfarbe - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Seitenverkleidung - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Trim A/B - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Ornaments - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Federung - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Rua Felgen - $3000</span><input type="checkbox" value="3000"></label>
+
+                </div>
+            </div>
+
+            <!-- LACK -->
+
+            <div class="box">
+                <h2>Lackierungen</h2>
+
+                <div class="scroll">
+
+                    <label class="item"><span>Primärlack - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Chamäleonlack - $2000</span><input type="checkbox" value="2000"></label>
+                    <label class="item"><span>Sekundärlack - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Pearleffekt - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Armaturfarbe - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Innenfarbe - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Felgenlack - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Unterboden - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Reifenrauch - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Xenonfarbe - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Livery - $300</span><input type="checkbox" value="300"></label>
+                    <label class="item"><span>Chamäleon Felgen - $1000</span><input type="checkbox" value="1000"></label>
+
+                </div>
+            </div>
+
+            <!-- RECHTS -->
+
+            <div>
+
+                <div class="box">
+                    <h2>Motor</h2>
+
+                    <label class="item"><span>Full Tuning - $40000</span><input type="checkbox" value="40000"></label>
+                    <label class="item"><span>Motor - $16500</span><input type="checkbox" value="16500"></label>
+                    <label class="item"><span>Getriebe - $16500</span><input type="checkbox" value="16500"></label>
+                    <label class="item"><span>Turbo - $7500</span><input type="checkbox" value="7500"></label>
+
+                </div>
+
+                <div class="box" style="margin-top:18px;">
+
+                    <h2>Informationen</h2>
+
+                    <div class="info">
+
+                        <p>Reparaturkit: <span class="red">$300</span></p>
+
+                        <p>Auch für Kunden: <span class="red">$300</span></p>
+
+                        <p>Funkfrequenz: <span class="red">8</span></p>
+
+                        <p>Sprechweite: <span class="red">3 Meter</span></p>
+
+                        <p>Nach Zahlung RESET drücken!</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MULTI -->
+
+    <div class="multi">
+
+        <table>
+
+            <tr>
+                <th>Mehrere Autos</th>
+                <th>Preis</th>
+            </tr>
+
+            <tr><td>Auto 1</td><td id="car1">$0</td></tr>
+            <tr><td>Auto 2</td><td id="car2">$0</td></tr>
+            <tr><td>Auto 3</td><td id="car3">$0</td></tr>
+            <tr><td>Auto 4</td><td id="car4">$0</td></tr>
+            <tr><td>Auto 5</td><td id="car5">$0</td></tr>
+            <tr><td>Auto 6</td><td id="car6">$0</td></tr>
+            <tr><td>Auto 7</td><td id="car7">$0</td></tr>
+            <tr><td>Auto 8</td><td id="car8">$0</td></tr>
+
+        </table>
+
+    </div>
+
+    <!-- VERTRÄGE -->
+
+    <div class="contracts">
+
+        <h1>Verträge</h1>
+
+        <div class="contract-form">
+
+            <input type="text" id="customerName" placeholder="Kundenname">
+
+            <input type="date" id="contractDate">
+
+            <input type="date" id="expiryDate">
+
+            <button onclick="addContract()">Hinzufügen</button>
+
+        </div>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Kundenname</th>
+                    <th>Datum</th>
+                    <th>Ablaufdatum</th>
+                    <th>Status</th>
+                    <th>Aktionen</th>
+                </tr>
+            </thead>
+
+            <tbody id="contractsTable"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script>
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const priceElement = document.getElementById('price');
+
+let currentSlot = 1;
+
+/* PREIS BERECHNEN */
+
+function calculateTotal(){
+
+    let total = 0;
+
+    checkboxes.forEach(box => {
+
+        if(box.checked){
+            total += Number(box.value);
+        }
+
+    });
+
+    priceElement.innerText = "$" + total.toLocaleString();
+
+}
+
+/* EVENTS */
+
+checkboxes.forEach(box => {
+    box.addEventListener('change', calculateTotal);
+});
+
+/* RESET */
+
+function resetAll(){
+
+    checkboxes.forEach(box => {
+        box.checked = false;
+    });
+
+    calculateTotal();
+
+}
+
+/* BEZAHLEN */
+
+function payBill(){
+
+    let total = 0;
+
+    checkboxes.forEach(box => {
+
+        if(box.checked){
+            total += Number(box.value);
+        }
+
+    });
+
+    if(total <= 0){
+        alert("Kein Betrag ausgewählt!");
+        return;
+    }
+
+    document.getElementById("car" + currentSlot).innerText =
+        "$" + total.toLocaleString();
+
+    alert("Rechnung bezahlt: $" + total.toLocaleString());
+
+    currentSlot++;
+
+    if(currentSlot > 8){
+        currentSlot = 1;
+    }
+
+    resetAll();
+
+}
+
+let calcDisplay = document.getElementById("calc-display");
+
+function appendCalc(value) {
+    calcDisplay.value += value;
+}
+
+function clearCalc() {
+    calcDisplay.value = "";
+}
+
+function calculate() {
+    try {
+        calcDisplay.value = eval(calcDisplay.value);
+    } catch {
+        calcDisplay.value = "Fehler";
+    }
+}
+
+/* VERTRÄGE */
+
+let contracts = JSON.parse(localStorage.getItem("contracts")) || [];
+
+/* SPEICHERN */
+
+function saveContracts(){
+    localStorage.setItem("contracts", JSON.stringify(contracts));
+}
+
+/* LADEN */
+
+function loadContracts(){
+
+    const table = document.getElementById("contractsTable");
+
+    table.innerHTML = "";
+
+    contracts.forEach((contract, index) => {
+
+        const today = new Date();
+        const expiry = new Date(contract.expiryDate);
+
+        const expired = expiry < today;
+
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${contract.customer}</td>
+            <td>${contract.contractDate}</td>
+            <td>${contract.expiryDate}</td>
+            <td class="${expired ? 'status-red' : 'status-green'}">
+                ${expired ? 'Abgelaufen' : 'Aktiv'}
+            </td>
+            <td>
+                <button class="edit-btn" onclick="editContract(${index})">
+                    Bearbeiten
+                </button>
+
+                <button class="delete-btn" onclick="deleteContract(${index})">
+                    Löschen
+                </button>
+            </td>
+        `;
+
+        table.appendChild(row);
+
+    });
+
+}
+
+/* HINZUFÜGEN */
+
+function addContract(){
+
+    const customer = document.getElementById("customerName").value;
+    const contractDate = document.getElementById("contractDate").value;
+    const expiryDate = document.getElementById("expiryDate").value;
+
+    if(!customer || !contractDate || !expiryDate){
+        alert("Bitte alles ausfüllen!");
+        return;
+    }
+
+    contracts.push({
+        customer,
+        contractDate,
+        expiryDate
+    });
+
+    saveContracts();
+    loadContracts();
+
+    document.getElementById("customerName").value = "";
+    document.getElementById("contractDate").value = "";
+    document.getElementById("expiryDate").value = "";
+
+}
+
+function filterItems() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const items = document.querySelectorAll(".item");
+
+    items.forEach(item => {
+        const text = item.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            item.style.display = "flex";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+
+
+/* LÖSCHEN */
+
+function deleteContract(index){
+
+    contracts.splice(index, 1);
+
+    saveContracts();
+    loadContracts();
+
+}
+
+/* BEARBEITEN */
+
+function editContract(index){
+
+    const contract = contracts[index];
+
+    const newCustomer = prompt("Kundenname:", contract.customer);
+    const newContractDate = prompt("Datum:", contract.contractDate);
+    const newExpiryDate = prompt("Ablaufdatum:", contract.expiryDate);
+
+    if(newCustomer && newContractDate && newExpiryDate){
+
+        contracts[index] = {
+            customer: newCustomer,
+            contractDate: newContractDate,
+            expiryDate: newExpiryDate
+        };
+
+        saveContracts();
+        loadContracts();
+
+    }
+
+}
+
+/* START */
+
+loadContracts();
+
+</script>
+
+</body>
+</html>
